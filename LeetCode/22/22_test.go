@@ -8,6 +8,7 @@ import (
  * CreatedBy: wlei at 2020/6/9
  * Description:
  *
+ * 注意： 切片比较时，循环比较元素比使用reflect中的deepEqual函数要快
  */
 
 func TestGenerateParenthesis(t *testing.T) {
