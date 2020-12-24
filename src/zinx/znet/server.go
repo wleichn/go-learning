@@ -52,6 +52,7 @@ func (s *Server) Start() {
 						fmt.Println("conn read err ", err)
 						return
 					}
+					fmt.Printf("Recieve client buf: %s \n", buf)
 
 					// 回显功能
 					if _, err := conn.Write(buf[:cnt]); err != nil {
