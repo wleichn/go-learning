@@ -41,7 +41,7 @@ func NewConnection(conn *net.TCPConn, connID uint32, callback_api ziface.HandleF
 // 当前连接的读业务方法
 func (c *Connection)StartReader(){
 	fmt.Println("Reader Connection is running...")
-	defer fmt.Println("connID = ", c.ConnID, "Reader is exit, remote addr is,", c.GetRemoteAddr().String())
+	defer fmt.Println("connID = ", c.ConnID, "Reader is exit, remote addr is,", c.RemoteAddr().String())
 	defer c.Stop()
 
 	for {
@@ -99,11 +99,11 @@ func (c *Connection) GetConnID() uint32{
 }
 
 // 获取远程客户端tcp状态
-func (c *Connection) GetRemoteAddr() *net.Addr{
-
+func (c *Connection) RemoteAddr() net.Addr{
+	return c.Conn.RemoteAddr()
 }
 
 // 发送数据
 func (c *Connection) Send(data []byte) error{
-
+	return nil
 }
