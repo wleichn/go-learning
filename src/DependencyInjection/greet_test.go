@@ -1,4 +1,4 @@
-package DependencyInjection
+package main
 
 import (
 	"bytes"
